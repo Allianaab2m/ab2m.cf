@@ -10,11 +10,11 @@ export const metadata = {
     card: "summary_large_image",
     title: "ab2m.cf",
     description: "Alliana's personal website",
-    creator: "@ab2m_Alliana"
+    creator: "@ab2m_Alliana",
   },
   icons: {
     icon: "icon.ico",
-  }
+  },
 };
 
 export default function RootLayout({
