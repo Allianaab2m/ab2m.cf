@@ -1,14 +1,14 @@
-'use client'
-import React from 'react';
-import { HiMoon, HiSun } from "react-icons/hi"
+"use client";
+import React from "react";
+import { HiMoon, HiSun } from "react-icons/hi";
 
 export const ThemeToggle = (props: { className?: string }) => {
-  const [theme, setTheme] = React.useState('business');
+  const [theme, setTheme] = React.useState("business");
   const toggleTheme = () => {
-    setTheme(theme === 'corporate' ? 'business' : 'corporate');
+    setTheme(theme === "corporate" ? "business" : "corporate");
   };
   React.useEffect(() => {
-    document.querySelector('html')?.setAttribute('data-theme', theme);
+    document.querySelector("html")?.setAttribute("data-theme", theme);
   }, [theme]);
   return (
     <>
@@ -19,4 +19,4 @@ export const ThemeToggle = (props: { className?: string }) => {
       </label>
     </>
   );
-}
+};
