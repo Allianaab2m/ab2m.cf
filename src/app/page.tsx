@@ -2,11 +2,7 @@ import Link from "next/link"
 import { getAllSlug } from "@/libs/get-all-slug"
 import type { NextPage } from "next"
 
-type Props = {
-  slugs: string[]
-}
-
-const Home: NextPage<Props> = () => {
+const Home: NextPage = () => {
   const slugs = getAllSlug("contents")
   return (
     <div className="container">
