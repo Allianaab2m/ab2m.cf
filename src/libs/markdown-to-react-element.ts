@@ -1,13 +1,15 @@
-import CustomLink from "@/components/CustomLink"
-import { Fragment, createElement, ReactElement } from "react"
-import rehypeRaw from "rehype-raw"
-import rehypeReact from "rehype-react"
-import { remark } from "remark"
-import remarkBreaks from "remark-breaks"
-import remarkGfm from "remark-gfm"
-import remarkRehype from "remark-rehype"
+import CustomLink from "@/components/CustomLink";
+import { Fragment, createElement, ReactElement } from "react";
+import rehypeRaw from "rehype-raw";
+import rehypeReact from "rehype-react";
+import { remark } from "remark";
+import remarkBreaks from "remark-breaks";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
 
-export const markdownToReactElement = (markdownContent: string): ReactElement => {
+export const markdownToReactElement = (
+  markdownContent: string
+): ReactElement => {
   return remark()
     .use(remarkGfm)
     .use(remarkBreaks)
@@ -18,8 +20,7 @@ export const markdownToReactElement = (markdownContent: string): ReactElement =>
       components: {
         a: CustomLink,
       },
-      createElement
+      createElement,
     })
-    .processSync(markdownContent).result
-}
-
+    .processSync(markdownContent).result;
+};
