@@ -10,7 +10,7 @@ type Props = {
 
 const BlogDetailPage = async ({ params }: Props) => {
   return (
-    <div className="container">
+    <div className="prose">
       {markdownToReactElement(
         getMarkdown(`contents/${params?.slug}.md`).content
       )}
