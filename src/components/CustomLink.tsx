@@ -7,10 +7,15 @@ const CustomLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
 }) => {
   return href?.startsWith("/") ? (
     <Link href={href}>{children}</Link>
+  ) : href?.startsWith("#") ? (
+    <a href={href}>{children}</a>
   ) : (
-    <a href={href} rel="noreferrer" target="_blank">
+    <iframe
+      className="dark:opacity-80 rounded"
+      src={`https://hatenablog-parts.com/embed?url=${href}`}
+    >
       {children}
-    </a>
+    </iframe>
   );
 };
 
