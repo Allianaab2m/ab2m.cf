@@ -11,7 +11,14 @@ const AllBlogArticlePage: NextPage = () => {
         {slugs.map((slug, i) => {
           return (
             <li key={i}>
-              <Link href={`/blogs/${slug}`}>{slug}</Link>
+              <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                  <h2 className="card-title">{slug}</h2>
+                  <button className="btn btn-primary">
+                    <Link href={`/blogs/${slug}`}>{"続きを読む"}</Link>
+                  </button>
+                </div>
+              </div>
             </li>
           );
         })}

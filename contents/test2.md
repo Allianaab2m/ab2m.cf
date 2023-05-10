@@ -12,4 +12,8 @@
 const foo = () => {}
 ```
 
+脚注[^1]
+
 https://misskey.art/@Alliana
+
+[^1]: 脚注など

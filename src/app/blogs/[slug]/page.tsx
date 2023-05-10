@@ -8,14 +8,11 @@ type Props = {
   };
 };
 
-const BlogDetailPage = async ({ params }: Props) => {
-  return (
-    <div className="prose">
-      {markdownToReactElement(
-        getMarkdown(`contents/${params?.slug}.md`).content
-      )}
-    </div>
+const BlogDetailPage = ({ params }: Props) => {
+  const content = markdownToReactElement(
+    getMarkdown(`contents/${params.slug}.md`).content
   );
+  return <div className="mx-auto prose">{content}</div>;
 };
 
 export const generateStaticParams = () => {
